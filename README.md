@@ -1,16 +1,14 @@
-# Fourier-TOuNN
+# TOuNN
 
-[Length Scale Control in Topology Optimization using Fourier Enhanced Neural Networks](https://ersl.wisc.edu/publications/2020/FourierTOuNN.pdf)
+[TOuNN: Topology Optimization using Neural Networks](https://link.springer.com/article/10.1007/s00158-020-02748-4)
 
-Aaditya Chandrasekhar, Krishnan Suresh  
+[Aaditya Chandrasekhar](https://aadityacs.github.io/), Krishnan Suresh  
 [Engineering Representations and Simulation Lab](https://ersl.wisc.edu)  
 University of Wisconsin-Madison 
 
 ## Abstract
-Length scale control is often imposed in topology optimization (TO) to make the design amenable to manufacturing and other functional requirements. While several length scale control strategies have been proposed, practical challenges often arise due to the coupling between the mesh size and length scales. In particular, when a maximum length scale is imposed to obtain thin members, extraction of the boundary is often impaired by the mesh resolution.
-
-In this paper we propose a mesh-independent length scale control strategy, by extending a recently proposed SIMP-based TO formulation using neural networks (TOuNN). Specifically, we enhance TOuNN with a Fourier space projection, to control the minimum and/or maximum length scales. The proposed method does not involve additional constraints, while the sensitivity computations are automated through the neural network’s backpropagation, making the method easy to implement.
+Neural networks, and more broadly, machine learning techniques, have been recently exploited to accelerate topology optimization through data-driven training and image processing. In this paper, we demonstrate that one can directly execute topology optimization (TO) using neural networks (NN). The primary concept is to use the NN’s activation functions to represent the popular Solid Isotropic Material with Penalization (SIMP) density field. In other words, the density function is parameterized by the weights and bias associated with the NN, and spanned by NN’s activation functions; the density representation is thus independent of the finite element mesh. Then, by relying on the NN’s built-in backpropogation, and a conventional finite element solver, the density field is optimized. Methods to impose design and manufacturing constraints within the proposed framework are described and illustrated. A byproduct of representing the density field via activation functions is that it leads to a crisp and differentiable boundary. The proposed framework is simple to implement and is illustrated through 2D and 3D examples. Some of the unresolved challenges with the proposed framework are also summarized.
 
 ## Code
 
-Run FourierTOuNN IPython notebook on Google Colab for a demo.
+Run TOuNN IPython notebook on Google Colab for a demo.
